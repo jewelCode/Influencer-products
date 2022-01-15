@@ -9,7 +9,7 @@ h1{
     font-weight: bold;
 }
 
-.header-part-first{
+/* .header-part-first{
     width: 60%;
     margin: 100px;
 }
@@ -24,13 +24,25 @@ h1{
 .header-part-second img {
     width: 100%;
     margin-top: 100px;
-}
+} */
 
+.header-part .cover-photo{
+    background-image: url(./resources/images/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .header-container{
-    display: flex;
-    clear: both;  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
+.header-part{
+    margin-top: 100px;
+    width: 100%;
+    margin-left: 100px;
+    
+}
 .button{
     background-color: #E02C6D;
     padding: 15px;
@@ -40,18 +52,34 @@ h1{
     text-decoration: none;
 }
 
+
+
 .products-collection{
     text-align: center;
 }
 .products-container{
     margin-left: 10%; 
     margin-right: 10%;
+    
+    padding: 20px;
 }
 .products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 26px;
+    grid-column-gap: 26px;
     align-items: center;
+}
+
+.product{
+    background-color: white;
+    padding-left: 20px;
+    box-shadow: 3px 3px 3px 3px gray;
+    border-radius: 5px;
+}
+
+.product img{
+    margin-top: 20px;
 }
 .footer-container{
     margin-top: 50px;
@@ -59,14 +87,51 @@ h1{
     background-color:#0A0826;
     padding: 50px;
     color: white;
+    width: 100%;
 }
+
+
 
 /* media Queries */
 
 
 @media only screen and (max-width: 688px){
     .header-container{
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-right: 80px;
+        justify-content: center;
+    }
+    
+    .header-part h1{
+        text-align: center;
+        margin-right: 80px;
+        font-size: 30px;
+    }
+
+    .header-part p{
+        text-align: center;
+        margin-right: 80px;
+    }
+    .header-part .btn{
+        text-align: center;
+        margin-right: 70px;
+    }
+
+    .button{
+        background-color: #E02C6D;
+        padding: 15px;
+        color: white;
+        border-radius: 50px;
+        width: 50px;
+        text-decoration: none;
+    }
+    section h2{
+        text-align: center;
+    }
+    
+    .header-container .header-part:nth-of-type(1){
+        order: 2;
     }
     .products{
         grid-template-columns: repeat(1, 1fr);
@@ -78,9 +143,64 @@ h1{
     }
 
     .footer-container{
-        background-color: red;
+        width: 100%;
         
     }
     
+}
+
+/* tablet devices */
+
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .header-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 80px;
+        justify-content: center;
+    }
+    
+    .header-part h1{
+        text-align: center;
+        margin-right: 80px;
+        font-size: 30px;
+    }
+
+    .header-part p{
+        text-align: center;
+        margin-right: 80px;
+    }
+    .header-part .btn{
+        text-align: center;
+        margin-right: 70px;
+    }
+
+    .button{
+        background-color: #E02C6D;
+        padding: 15px;
+        color: white;
+        border-radius: 50px;
+        width: 50px;
+        text-decoration: none;
+    }
+    section h2{
+        text-align: center;
+    }
+    
+    .header-container .header-part:nth-of-type(1){
+        order: 1;
+    }
+    .products{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .products{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-container{
+        width: 100%;
+        
+    }
 }
 
