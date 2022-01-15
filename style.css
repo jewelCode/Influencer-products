@@ -4,31 +4,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-h3{
+.logo {
     margin-left: 100px;
 }
+
 h1 {
     font-size: 52px;
     font-weight: bold;
 }
 
-/* .header-part-first{
-    width: 60%;
-    margin: 100px;
-}
-.header-part-second{
-    margin-right: 100px;
-    background-image: url(./resources/images/Circle\ design.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 100px;
-}
 
-.header-part-second img {
-    width: 100%;
-    margin-top: 100px;
-} */
 
 .header-part .cover-photo {
     background-image: url(./resources/images/Circle\ design.svg);
@@ -75,7 +60,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 26px;
     grid-column-gap: 26px;
-    align-items: center;
+    
 }
 
 .product {
@@ -88,7 +73,20 @@ h1 {
 .product img {
     margin-top: 20px;
 }
+.review{
+    display: flex;
+    text-align: center;
+    
+}
+.review-section{
+    width: 30%;
+    margin: auto;
+    border: 1px solid black;
+}
 
+.rating-icon{
+    color: goldenrod;
+}
 .footer-container {
     margin-top: 50px;
     text-align: center;
@@ -104,9 +102,10 @@ h1 {
 
 
 @media only screen and (max-width: 688px) {
-    h3{
+    h3 {
         text-align: center;
     }
+
     .header-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -167,9 +166,10 @@ h1 {
 /* Media Queries For Tablet Devices */
 
 @media only screen and (min-width: 688px) and (max-width: 992px) {
-    h3{
+    h3 {
         text-align: center;
     }
+
     .header-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -220,7 +220,4 @@ h1 {
         justify-content: center;
     }
 
-    .footer-container {
-        width: 100%;
-    }
 }
