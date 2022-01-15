@@ -60,7 +60,6 @@ h1{
 .products-container{
     margin-left: 10%; 
     margin-right: 10%;
-    
     padding: 20px;
 }
 .products{
@@ -185,12 +184,11 @@ h1{
     section h2{
         text-align: center;
     }
-    
-    .header-container .header-part:nth-of-type(1){
-        order: 1;
+    .product img{
+        margin-right: 20px;
     }
     .products{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         
     }
     .products{
@@ -200,7 +198,6 @@ h1{
 
     .footer-container{
         width: 100%;
-        
     }
 }
 
